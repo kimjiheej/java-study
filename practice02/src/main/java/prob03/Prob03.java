@@ -14,4 +14,9 @@ public class Prob03 {
 		printCharArray(c);
 	}
 
+	private static void printCharArray(char[] c) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
