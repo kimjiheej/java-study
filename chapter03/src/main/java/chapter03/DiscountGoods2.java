@@ -12,7 +12,6 @@ public class DiscountGoods2 extends Goods2 {
     	return discountRate * price;
     }
     
-    
-    
+
     
 }

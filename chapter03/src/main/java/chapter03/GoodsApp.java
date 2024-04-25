@@ -7,12 +7,7 @@ public class GoodsApp {
 		
 		// 객체를 만들어서 데이터를 넣어보고 메서드를 호출해봐라 
 		
-		Goods camera =  new Goods(); // 생성자 만들지 않아도 사용할 수 있다. 자동으로 생성해준다 
-		
-		camera.setName("nikon");
-		camera.setPrice(400000);
-		camera.setCountSold(10);
-		camera.setCountStock(20);
+		Goods camera =  new Goods("nikon",400000,10,20);
 		
 		camera.showInfo();
 		
