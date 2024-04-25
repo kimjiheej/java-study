@@ -1,10 +1,14 @@
 package paint;
 
-public class Point {
+public class Point implements Drawable {
 	
 	private int x;
 	private int y;
 	
+	
+	public Point() {
+		
+	}
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -18,7 +22,6 @@ public class Point {
 	public int getY() {
 		return y;
 	}
-	
 	public void show(boolean visible) { // 오버 로딩 
 	   if(visible) {
 		   show();
@@ -31,7 +34,10 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
+   
+    
     public void show() {
     	System.out.println("점("+x+","+y+")을 그렸습니다.");
     }
+    
 }

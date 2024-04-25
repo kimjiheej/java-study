@@ -6,7 +6,7 @@ public class CurrencyConverterTest {
 
 	public static void main(String[] args) {
 		//  환율을 세팅 합니다.
-		CurrencyConverterTest.setRate(1121);
+		CurrencyConverterTest.setRate(1374);
 		
 		double dollar = CurrencyConverterTest.toDollar( 1000000. );
 		System.out.println( "백만원은 " + dollar + "달러 입니다" );

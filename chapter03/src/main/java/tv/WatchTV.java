@@ -5,7 +5,7 @@ public class WatchTV {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		  TV tv = new TV( 7, 20, false);  	
+		     TV tv = new TV( 7, 20, false);  	
 	         
 	         tv.status();	
 	         

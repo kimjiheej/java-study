@@ -15,7 +15,6 @@ public class CalcApp {
 			if( "quit".equals( expression ) ) {
 				break;
 			}
-			
 			String[] tokens = expression.split( " " );
 			
 			if( tokens.length != 3 ) {
@@ -26,35 +25,43 @@ public class CalcApp {
 			int lValue = Integer.parseInt( tokens[ 0 ] );
 			int rValue = Integer.parseInt( tokens[ 2 ] );
 			
+			
+			Arith arith = null;
+			
 			switch( tokens[ 1 ] ) {
 				case "+" : {
-					Add add = new Add();
-					add.setValue( lValue, rValue );
-					int result = add.calculate();
+					
+					/*
+					 arith = new Add()
+					 
+					 */
+					arith = new Add();
+					arith.setValue( lValue, rValue );
+					int result = arith.calculate();
 					System.out.println( ">> " + result );
 					
 					break;
 				}
 				case "-" : {
-					Sub sub = new Sub();
-					sub.setValue( lValue, rValue );
-					int result = sub.calculate();
+					arith = new Sub();
+					arith.setValue( lValue, rValue );
+					int result = arith.calculate();
 					System.out.println( ">> " + result );
 					
 					break;
 				}
 				case "*" : {
-					Mul mul = new Mul();
-					mul.setValue( lValue, rValue );
-					int result = mul.calculate();
+					arith = new Mul();
+				    arith.setValue( lValue, rValue );
+					int result = arith.calculate();
 					System.out.println( ">> " + result );
 					
 					break;					
 				}
 				case "/" : {
-					Div div = new Div();
-					div.setValue( lValue, rValue );
-					int result = div.calculate();
+					arith = new Div();
+					arith.setValue( lValue, rValue );
+					int result = arith.calculate();
 					System.out.println( ">> " + result );
 					
 					break;
@@ -64,6 +71,11 @@ public class CalcApp {
 				}
 			}
 		}
+		
+		/*
+		 if(arith != null)
+		    refactoring 을 해보아라...! setValue 는 구현이 되어야 한다 
+		 */
 		
 		scanner.close();
 
