@@ -3,7 +3,7 @@ package chapter04;
 import java.util.Objects;
 
 public class Point {
-
+	
 	private int x;
 	private int y; 
 	public int getX() {
@@ -11,9 +11,7 @@ public class Point {
 	}
 	public void setX(int x) {
 		this.x = x;
-	}
-
-	
+	}	
 	@Override
 	public int hashCode() {
 		return Objects.hash(x, y);
@@ -41,7 +39,6 @@ public class Point {
     	return "Point [x=" + x + ", y=" + y + "]";
     }
     
- 
 	public Point() {
     	
     }
