@@ -1,5 +1,7 @@
 package paint;
 
+import com.poscodx.paint.shape.Shape;
+
 public class Circle extends Shape {
 
 	private int radius;

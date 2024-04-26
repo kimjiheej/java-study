@@ -1,5 +1,7 @@
 package paint;
 
+import com.poscodx.paint.i.Drawable;
+
 public class GraphicText implements Drawable {
 
 	private String text;

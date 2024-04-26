@@ -1,4 +1,11 @@
-package paint;
+package com.poscodx.paint.main;
+
+import com.poscodx.paint.i.Drawable;
+import com.poscodx.paint.point.Point;
+import com.poscodx.paint.shape.Shape;
+
+import paint.Circle;
+import paint.GraphicText;
 
 public class Main {
 
