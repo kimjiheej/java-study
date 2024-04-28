@@ -12,9 +12,8 @@ public class Base {
 	
 	
 	public void day(){
-		System.out.print("낮");
+		System.out.println("낮");
 	}
-	
 	
 	public void night(){
 		System.out.println("night");

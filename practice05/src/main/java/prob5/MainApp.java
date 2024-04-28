@@ -2,6 +2,7 @@ package prob5;
 
 public class MainApp {
 
+	// resize 해서 
 	public static void main(String[] args) {
 		try {
 			MyStack stack = new MyStack(3);
@@ -20,14 +21,12 @@ public class MainApp {
 
 			stack = new MyStack(3);
 			stack.push("Hello");
-
-			System.out.println(stack.pop());
-			System.out.println(stack.pop());
 			
-		} catch ( MyStackException ex) {
-			System.out.println( ex );
+			System.out.println(stack.pop());
+			System.out.println(stack.pop());
+		} catch (MyStackException ex) {
+			System.out.println(ex);
 		}
-
 	}
 
 }
