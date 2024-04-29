@@ -14,5 +14,5 @@ public class Printer {
 	public void println(String name) {
 		System.out.println(name);
 	}
-   
+	
 }
