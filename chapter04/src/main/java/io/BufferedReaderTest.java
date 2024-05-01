@@ -8,6 +8,7 @@ import java.io.IOException;
 public class BufferedReaderTest {
 
 	public static void main(String[] args) {
+		
 		BufferedReader br = null;
 		
 		try {
