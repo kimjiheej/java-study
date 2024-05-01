@@ -9,22 +9,22 @@ public class BufferedOutputStreamTest {
 
 	public static void main(String[] args) {
 		// 기반 스트림 
-		
+
 		BufferedOutputStream bos = null;
-	
+
 		try {
-			
+
 			// 기반 스트림 
 			FileOutputStream fos = new FileOutputStream("hello.txt");
-			
+
 			// 보조 스트림 
-	       bos = new BufferedOutputStream(fos);
-			
+			bos = new BufferedOutputStream(fos);
+
 			for(int i= 97; i<= 122; i++) {
 				bos.write(i);
 			}
 		} catch (FileNotFoundException e) {
-	
+
 			System.out.println("file not found:" + e);
 		} catch(IOException e) {
 			System.out.println("error: "+ e);
@@ -38,7 +38,7 @@ public class BufferedOutputStreamTest {
 				e.printStackTrace();
 			}
 		}
-		}
 	}
+}
 
 
