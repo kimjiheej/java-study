@@ -117,7 +117,7 @@ public class RequestHandler extends Thread {
 		byte[] body = Files.readAllBytes(file.toPath());
 		String contentType = Files.probeContentType(file.toPath());
 		
-		outputStream.write((protocol + " 404 Bad Request\n").getBytes("UTF-8"));
+		outputStream.write((protocol + " 404 File Not Found\n").getBytes("UTF-8"));
 		outputStream.write(("Content-Type:" + contentType + "; charset=utf-8\n").getBytes("UTF-8"));
 		outputStream.write("\n".getBytes());
 		outputStream.write(body);
