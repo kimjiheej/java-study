@@ -37,11 +37,13 @@ public class TCPServer {
 				OutputStream os = socket.getOutputStream();
 				
 				while(true) {
+					System.out.println("try to read");
 					//5. 데이터 읽기
 					byte[] buffer = new byte[256];
 					int readByteCount = is.read(buffer); // blocking
 					if(readByteCount == -1) {
 						// 클라이언트가 정상적으로 종료(close() 호출)
+						// Connectino Reset 
 						System.out.println("[server] closed by client");
 						break;
 					}
@@ -52,9 +54,19 @@ public class TCPServer {
 					// 6. 데이터 쓰기
 					os.write(data.getBytes("utf-8"));
 					
+					try {
+						    Thread.sleep(3000);
+						    
+						    
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					
+					os.write(data.getBytes("utf-8"));
+					
 				}
 			} catch(SocketException e) {
-				System.out.println("[server] suddenly closed by client");
+				System.out.println("[server] Socket Exception: " + e);
 			} catch(IOException e) {
 				System.out.println("[server] error:" + e);
 			} finally {
