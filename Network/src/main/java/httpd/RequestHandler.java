@@ -56,6 +56,13 @@ public class RequestHandler extends Thread {
 				responseStaticResource(outputStream, tokens[1], tokens[2]);
 			} else {
 				// methods: POST, PUT, DELETE, HEAD, CONNECT
+				
+				/*
+				 tokens[0] : HTTP 요청의 메서드를 나타낸다. 주로 GET.POST.PUT.DELETE 
+				 tokens[1] : HTTP 요청의 URL 을 나타낸다. 클라이언트가 요청한 자원의 경로를 나타낸다. 
+				 tokens[2] : HTTP 요청의 프로토콜과 버전을 나타낸다. 주로 HTTP/1.1 이나 HTTP/2.0 과 같은 형태이다. 
+				 
+				 */
 				// SimpleHttpServer 에서는 무시(400 Bad Request)
 			 response400Error(outputStream, tokens[2]); // tokesn[2] protocol 
 			    
