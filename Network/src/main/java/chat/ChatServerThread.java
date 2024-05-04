@@ -77,7 +77,6 @@ public class ChatServerThread extends Thread {
 		    // log("서버와의 연결이 끊겼습니다. 재연결을 시도합니다.");
 		    // 재연결 로직 추가
 		    // 혹은 사용자에게 적절한 안내 출력
-			log("여기");
 			doQuit(printWriter);
 		} catch (IOException e) {
 		    log("error: " + e);
