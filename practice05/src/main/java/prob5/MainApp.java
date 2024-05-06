@@ -5,25 +5,25 @@ public class MainApp {
 	// resize 해서 
 	public static void main(String[] args) {
 		try {
-			MyStack stack = new MyStack(3);
-			stack.push("Hello");
-			stack.push("World");
-			stack.push("!!!");
-			stack.push("java");
-			stack.push(".");
+			MyStack s = new MyStack(3);
+			s.push("Hello");
+			s.push("World");
+			s.push("!!!");
+			s.push("java");
+			s.push(".");
 
-			while (stack.isEmpty() == false) {
-				String s = stack.pop();
-				System.out.println( s );
+			while (s.isEmpty() == false) {
+				String str = s.pop();
+				System.out.println( str );
 			}
 
-			System.out.println("======================================");
+			System.out.println("=============================");
 
-			stack = new MyStack(3);
-			stack.push("Hello");
+			s = new MyStack(3);
+			s.push("Hello");
 			
-			System.out.println(stack.pop());
-			System.out.println(stack.pop());
+			System.out.println(s.pop());
+			System.out.println(s.pop());
 		} catch (MyStackException ex) {
 			System.out.println(ex);
 		}

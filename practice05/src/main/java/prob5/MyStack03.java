@@ -5,19 +5,19 @@ import java.lang.reflect.Array;
 public class MyStack03<T> {
 
 	private int top;
-	private T[] buffer;
+	private T[] buf;
 
 	public MyStack03(int capacity) {
 		top = -1;
-		buffer = (T[]) new Object[capacity];
-	//	buffer = (T[])Array.newInstance(klass, capacity); // 실행 때에 객체가 실행되는 것이다.... 
+		buf = (T[]) new Object[capacity];
+	
 	}
 	public void push(T s) {
-		if (top == buffer.length - 1) {
+		if (top == buf.length - 1) {
 			resize();
 		}
 
-		buffer[++top] = s;		
+		buf[++top] = s;		
 	}
 
 	public T pop() throws MyStackException {
@@ -25,8 +25,8 @@ public class MyStack03<T> {
 			throw new MyStackException("stack is empty");
 		}
 
-	    T result = buffer[top];
-		buffer[top--] = null;
+	    T result = buf[top];
+		buf[top--] = null;
 
 		return result;
 	}
@@ -36,11 +36,11 @@ public class MyStack03<T> {
 	}
 
 	private void resize() {
-		T[] temp = (T[])new Object[buffer.length * 2];
+		T[] temp = (T[])new Object[buf.length * 2];
 		for (int i = 0; i <= top; i++) {
-			temp[i] = buffer[i];
+			temp[i] = buf[i];
 		}
 
-		buffer = temp;
+		buf = temp;
 	}
 }
