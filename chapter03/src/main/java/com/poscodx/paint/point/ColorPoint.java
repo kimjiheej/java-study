@@ -1,13 +1,14 @@
 package com.poscodx.paint.point;
 
 public class ColorPoint extends Point {
+	private String color;
 	
-	  private String color;
-	  
-	  public ColorPoint(int x, int y, String color) {
-		 super(x,y);
-		 this.color = color;
-	  }
+	public ColorPoint(int x, int y, String color) {
+		// setX(x);
+		// setY(y);
+		super(x, y);
+		this.color = color;
+	}
 
 	public String getColor() {
 		return color;
@@ -16,11 +17,14 @@ public class ColorPoint extends Point {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	
+
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
-		System.out.println("점(x=" + getX()+ "y="+getY()+ ", color = "+ getColor());
-			
-	}	
+		System.out.println(
+			"점(x=" + getX() +
+			", y=" + getY() +
+			", color=" + color +
+			")을 그렸습니다.");
+		
+	}
 }
